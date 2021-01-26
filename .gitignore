@@ -1,0 +1,9 @@
+.DS_Store
+./*.out
+/bin
+**/.DS_Store
+**/bin
+**/a.out
+**/libft.a
+/bin
+test
