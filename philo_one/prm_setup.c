@@ -1,5 +1,35 @@
 #include "philo_one.h"
 
+static int	ft_isdigit(int c)
+{
+	return (c >= 48 && c <= 57);
+}
+
+static int	ft_min(int x, int y)
+{
+	return ((x < y) ? x : y);
+}
+
+static int	ft_atoi(char *str)
+{
+	long		nb;
+	int			sign;
+
+	nb = 0;
+	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
+		str++;
+	sign = (*str == '-') ? -1 : 1;
+	if (*str == '+' || *str == '-')
+		str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		nb = nb * 10 + sign * (*str++ - '0');
+		if ((nb != 0) && ((nb > 0) != (sign > 0)))
+			return (sign == 1 ? -1 : 0);
+	}
+	return ((int)nb);
+}
+
 static int	is_uint(char *w)
 {
 	int i;
@@ -34,9 +64,9 @@ int	prm_setup(int ac, char **av, t_prm *prm, t_ctrl *ctrl)
 		&& is_uint(av[4]) && (!av[5] || is_uint(av[5]))))
 		return (0);
 	prm->num = ft_atoi(av[1]);
-	prm->die = ft_atoi(av[2]);
-	prm->eat = ft_atoi(av[3]);
-	prm->sleep = ft_atoi(av[4]);
+	prm->die = ft_atoi(av[2]) ;//* 1000;
+	prm->eat = ft_atoi(av[3]) * 1000;
+	prm->sleep = ft_atoi(av[4]) * 1000;
 	prm->delay = ft_min(prm->eat, prm->sleep);
 	prm->meals = (ac == 6) ? ft_atoi(av[5]) : INT_MAX;
 	if (prm->num < 2 || prm->die < 0 || prm->eat < 0 \

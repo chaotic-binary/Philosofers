@@ -3,6 +3,6 @@
 int err_msg(int err_type)
 {
 	if (err_type == ERR_MALLOC)
-		ft_putendl("Allocation error", 2);
+		write(2, "Allocation error", 16);
 	return (err_type);
 }
