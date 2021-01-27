@@ -1,15 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_arrays.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/27 20:09:29 by ttamesha          #+#    #+#             */
+/*   Updated: 2021/01/27 20:11:16 by ttamesha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo_one.h"
 
-/*static void	ft_swap(t_frk *a, t_frk *b)
-{
-    t_frk *tmp;
-
-    tmp = a;
-    a = b;
-    b = tmp;
-}*/
-
-int			frk_init(t_ctrl *ctrl)
+int	frk_init(t_ctrl *ctrl)
 {
 	int i;
 
@@ -19,7 +22,6 @@ int			frk_init(t_ctrl *ctrl)
 	while (i < ctrl->prm->num)
 	{
 		ctrl->frk[i].last_user = -1;
-        ctrl->frk[i].id = i;
 		if (pthread_mutex_init(&ctrl->frk[i].lock, NULL))
 			return (ERR_MUTEX);
 		++i;
@@ -27,7 +29,7 @@ int			frk_init(t_ctrl *ctrl)
 	return (0);
 }
 
-int			ph_init(t_ctrl *ctrl)
+int	ph_init(t_ctrl *ctrl)
 {
 	int i;
 
@@ -39,20 +41,18 @@ int			ph_init(t_ctrl *ctrl)
 		ctrl->ph[i].id = i + 1;
 		ctrl->ph[i].meals = 0;
 		if (i % 2)
-        {
-            ctrl->ph[i].f1 = &(ctrl->frk[i - 1]);
-            ctrl->ph[i].f2 = &(ctrl->frk[i]);
-        }
+		{
+			ctrl->ph[i].f1 = &(ctrl->frk[i - 1]);
+			ctrl->ph[i].f2 = &(ctrl->frk[i]);
+		}
 		else
-        {
-            ctrl->ph[i].f1 = &(ctrl->frk[i]);
-            ctrl->ph[i].f2 = &(ctrl->frk[(i == 0) ? ctrl->prm->num - 1 : i - 1]);
-        }
+		{
+			ctrl->ph[i].f1 = &(ctrl->frk[i]);
+			ctrl->ph[i].f2 = &(ctrl->frk[(i == 0) ? \
+							ctrl->prm->num - 1 : i - 1]);
+		}
 		ctrl->ph[i].prm = ctrl->prm;
 		++i;
 	}
-	if (pthread_mutex_init(&ctrl->prm->lock_write, NULL) || \
-		pthread_mutex_init(&ctrl->prm->lock_die, NULL))
-		return (ERR_MUTEX);
 	return (0);
 }

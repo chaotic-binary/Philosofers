@@ -6,22 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/ttamesha/Documents/Philosofers/philo_one/dlist.c
-philo_one.h
-/Users/ttamesha/Documents/Philosofers/philo_one/philo_one.h
-
-/Users/ttamesha/Documents/Philosofers/philo_one/error.c
-philo_one.h
-/Users/ttamesha/Documents/Philosofers/philo_one/philo_one.h
-
-/Users/ttamesha/Documents/Philosofers/philo_one/free_data.c
-philo_one.h
-/Users/ttamesha/Documents/Philosofers/philo_one/philo_one.h
-
-/Users/ttamesha/Documents/Philosofers/philo_one/init_arrays.c
-philo_one.h
-/Users/ttamesha/Documents/Philosofers/philo_one/philo_one.h
-
 /Users/ttamesha/Documents/Philosofers/philo_one/main.c
 philo_one.h
 /Users/ttamesha/Documents/Philosofers/philo_one/philo_one.h
@@ -41,12 +25,4 @@ sys/time.h
 -
 stdio.h
 -
-
-/Users/ttamesha/Documents/Philosofers/philo_one/print_state.c
-philo_one.h
-/Users/ttamesha/Documents/Philosofers/philo_one/philo_one.h
-
-/Users/ttamesha/Documents/Philosofers/philo_one/prm_setup.c
-philo_one.h
-/Users/ttamesha/Documents/Philosofers/philo_one/philo_one.h
 

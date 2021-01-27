@@ -143,59 +143,32 @@ philosophers/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/build
 .PHONY : philosophers/fast
 
-dlist.o: dlist.c.o
+act.o: act.c.o
 
-.PHONY : dlist.o
-
-# target to build an object file
-dlist.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/dlist.c.o
-.PHONY : dlist.c.o
-
-dlist.i: dlist.c.i
-
-.PHONY : dlist.i
-
-# target to preprocess a source file
-dlist.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/dlist.c.i
-.PHONY : dlist.c.i
-
-dlist.s: dlist.c.s
-
-.PHONY : dlist.s
-
-# target to generate assembly for a file
-dlist.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/dlist.c.s
-.PHONY : dlist.c.s
-
-error.o: error.c.o
-
-.PHONY : error.o
+.PHONY : act.o
 
 # target to build an object file
-error.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/error.c.o
-.PHONY : error.c.o
+act.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/act.c.o
+.PHONY : act.c.o
 
-error.i: error.c.i
+act.i: act.c.i
 
-.PHONY : error.i
+.PHONY : act.i
 
 # target to preprocess a source file
-error.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/error.c.i
-.PHONY : error.c.i
+act.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/act.c.i
+.PHONY : act.c.i
 
-error.s: error.c.s
+act.s: act.c.s
 
-.PHONY : error.s
+.PHONY : act.s
 
 # target to generate assembly for a file
-error.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/error.c.s
-.PHONY : error.c.s
+act.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/act.c.s
+.PHONY : act.c.s
 
 free_data.o: free_data.c.o
 
@@ -332,6 +305,33 @@ prm_setup.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/prm_setup.c.s
 .PHONY : prm_setup.c.s
 
+time_utils.o: time_utils.c.o
+
+.PHONY : time_utils.o
+
+# target to build an object file
+time_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/time_utils.c.o
+.PHONY : time_utils.c.o
+
+time_utils.i: time_utils.c.i
+
+.PHONY : time_utils.i
+
+# target to preprocess a source file
+time_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/time_utils.c.i
+.PHONY : time_utils.c.i
+
+time_utils.s: time_utils.c.s
+
+.PHONY : time_utils.s
+
+# target to generate assembly for a file
+time_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/time_utils.c.s
+.PHONY : time_utils.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -341,12 +341,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... philosophers"
-	@echo "... dlist.o"
-	@echo "... dlist.i"
-	@echo "... dlist.s"
-	@echo "... error.o"
-	@echo "... error.i"
-	@echo "... error.s"
+	@echo "... act.o"
+	@echo "... act.i"
+	@echo "... act.s"
 	@echo "... free_data.o"
 	@echo "... free_data.i"
 	@echo "... free_data.s"
@@ -362,6 +359,9 @@ help:
 	@echo "... prm_setup.o"
 	@echo "... prm_setup.i"
 	@echo "... prm_setup.s"
+	@echo "... time_utils.o"
+	@echo "... time_utils.i"
+	@echo "... time_utils.s"
 .PHONY : help
 
 

@@ -78,10 +78,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ttamesha/Documents/Philosofers/philo_one/dlist.c">
-			<Option target="philosophers"/>
-		</Unit>
-		<Unit filename="/Users/ttamesha/Documents/Philosofers/philo_one/error.c">
+		<Unit filename="/Users/ttamesha/Documents/Philosofers/philo_one/act.c">
 			<Option target="philosophers"/>
 		</Unit>
 		<Unit filename="/Users/ttamesha/Documents/Philosofers/philo_one/free_data.c">
@@ -100,6 +97,9 @@
 			<Option target="philosophers"/>
 		</Unit>
 		<Unit filename="/Users/ttamesha/Documents/Philosofers/philo_one/prm_setup.c">
+			<Option target="philosophers"/>
+		</Unit>
+		<Unit filename="/Users/ttamesha/Documents/Philosofers/philo_one/time_utils.c">
 			<Option target="philosophers"/>
 		</Unit>
 		<Unit filename="/Users/ttamesha/Documents/Philosofers/philo_one/CMakeLists.txt">

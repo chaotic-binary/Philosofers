@@ -90,18 +90,18 @@ CMakeFiles/philosophers.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philosophers.dir/main.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ttamesha/Documents/Philosofers/philo_one/main.c -o CMakeFiles/philosophers.dir/main.c.s
 
-CMakeFiles/philosophers.dir/error.c.o: CMakeFiles/philosophers.dir/flags.make
-CMakeFiles/philosophers.dir/error.c.o: ../error.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ttamesha/Documents/Philosofers/philo_one/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/philosophers.dir/error.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philosophers.dir/error.c.o   -c /Users/ttamesha/Documents/Philosofers/philo_one/error.c
+CMakeFiles/philosophers.dir/act.c.o: CMakeFiles/philosophers.dir/flags.make
+CMakeFiles/philosophers.dir/act.c.o: ../act.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ttamesha/Documents/Philosofers/philo_one/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/philosophers.dir/act.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philosophers.dir/act.c.o   -c /Users/ttamesha/Documents/Philosofers/philo_one/act.c
 
-CMakeFiles/philosophers.dir/error.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philosophers.dir/error.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ttamesha/Documents/Philosofers/philo_one/error.c > CMakeFiles/philosophers.dir/error.c.i
+CMakeFiles/philosophers.dir/act.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philosophers.dir/act.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ttamesha/Documents/Philosofers/philo_one/act.c > CMakeFiles/philosophers.dir/act.c.i
 
-CMakeFiles/philosophers.dir/error.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philosophers.dir/error.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ttamesha/Documents/Philosofers/philo_one/error.c -o CMakeFiles/philosophers.dir/error.c.s
+CMakeFiles/philosophers.dir/act.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philosophers.dir/act.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ttamesha/Documents/Philosofers/philo_one/act.c -o CMakeFiles/philosophers.dir/act.c.s
 
 CMakeFiles/philosophers.dir/free_data.c.o: CMakeFiles/philosophers.dir/flags.make
 CMakeFiles/philosophers.dir/free_data.c.o: ../free_data.c
@@ -155,39 +155,39 @@ CMakeFiles/philosophers.dir/init_arrays.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philosophers.dir/init_arrays.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ttamesha/Documents/Philosofers/philo_one/init_arrays.c -o CMakeFiles/philosophers.dir/init_arrays.c.s
 
-CMakeFiles/philosophers.dir/dlist.c.o: CMakeFiles/philosophers.dir/flags.make
-CMakeFiles/philosophers.dir/dlist.c.o: ../dlist.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ttamesha/Documents/Philosofers/philo_one/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/philosophers.dir/dlist.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philosophers.dir/dlist.c.o   -c /Users/ttamesha/Documents/Philosofers/philo_one/dlist.c
+CMakeFiles/philosophers.dir/time_utils.c.o: CMakeFiles/philosophers.dir/flags.make
+CMakeFiles/philosophers.dir/time_utils.c.o: ../time_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ttamesha/Documents/Philosofers/philo_one/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/philosophers.dir/time_utils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philosophers.dir/time_utils.c.o   -c /Users/ttamesha/Documents/Philosofers/philo_one/time_utils.c
 
-CMakeFiles/philosophers.dir/dlist.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philosophers.dir/dlist.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ttamesha/Documents/Philosofers/philo_one/dlist.c > CMakeFiles/philosophers.dir/dlist.c.i
+CMakeFiles/philosophers.dir/time_utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philosophers.dir/time_utils.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ttamesha/Documents/Philosofers/philo_one/time_utils.c > CMakeFiles/philosophers.dir/time_utils.c.i
 
-CMakeFiles/philosophers.dir/dlist.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philosophers.dir/dlist.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ttamesha/Documents/Philosofers/philo_one/dlist.c -o CMakeFiles/philosophers.dir/dlist.c.s
+CMakeFiles/philosophers.dir/time_utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philosophers.dir/time_utils.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ttamesha/Documents/Philosofers/philo_one/time_utils.c -o CMakeFiles/philosophers.dir/time_utils.c.s
 
 # Object files for target philosophers
 philosophers_OBJECTS = \
 "CMakeFiles/philosophers.dir/main.c.o" \
-"CMakeFiles/philosophers.dir/error.c.o" \
+"CMakeFiles/philosophers.dir/act.c.o" \
 "CMakeFiles/philosophers.dir/free_data.c.o" \
 "CMakeFiles/philosophers.dir/print_state.c.o" \
 "CMakeFiles/philosophers.dir/prm_setup.c.o" \
 "CMakeFiles/philosophers.dir/init_arrays.c.o" \
-"CMakeFiles/philosophers.dir/dlist.c.o"
+"CMakeFiles/philosophers.dir/time_utils.c.o"
 
 # External object files for target philosophers
 philosophers_EXTERNAL_OBJECTS =
 
 philosophers: CMakeFiles/philosophers.dir/main.c.o
-philosophers: CMakeFiles/philosophers.dir/error.c.o
+philosophers: CMakeFiles/philosophers.dir/act.c.o
 philosophers: CMakeFiles/philosophers.dir/free_data.c.o
 philosophers: CMakeFiles/philosophers.dir/print_state.c.o
 philosophers: CMakeFiles/philosophers.dir/prm_setup.c.o
 philosophers: CMakeFiles/philosophers.dir/init_arrays.c.o
-philosophers: CMakeFiles/philosophers.dir/dlist.c.o
+philosophers: CMakeFiles/philosophers.dir/time_utils.c.o
 philosophers: CMakeFiles/philosophers.dir/build.make
 philosophers: CMakeFiles/philosophers.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ttamesha/Documents/Philosofers/philo_one/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable philosophers"

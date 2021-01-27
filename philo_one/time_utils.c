@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_data.c                                        :+:      :+:    :+:   */
+/*   time_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/27 20:02:27 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/01/27 20:02:27 by ttamesha         ###   ########.fr       */
+/*   Created: 2021/01/27 20:26:52 by ttamesha          #+#    #+#             */
+/*   Updated: 2021/01/27 20:35:23 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_one.h"
 
-void	free_data(t_ctrl *ctrl)
+long	get_time(void)
 {
-	int i;
+	struct timeval tm;
 
-	if (ctrl->ph)
-		free(ctrl->ph);
-	if (ctrl->frk)
-		free(ctrl->frk);
-	pthread_mutex_destroy(&ctrl->prm->lock_write);
-	pthread_mutex_destroy(&ctrl->prm->lock_die);
-	i = -1;
-	while (++i < ctrl->prm->num)
-		pthread_mutex_destroy(&ctrl->frk[i].lock);
+	gettimeofday(&tm, NULL);
+	return (tm.tv_sec * 1000 + tm.tv_usec / 1000);
+}
+
+long	get_interval(struct timeval t)
+{
+	struct timeval tm;
+
+	gettimeofday(&tm, NULL);
+	return ((tm.tv_sec - t.tv_sec) * 1000 + (tm.tv_usec - t.tv_usec) / 1000);
 }

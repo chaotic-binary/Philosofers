@@ -1,11 +1,11 @@
-NAME		=	test #philo_one
+NAME		=	philo_one
 
-SRC			=	ft_swap.c\
+SRC			=	act.c\
 				free_data.c \
 				init_arrays.c \
-				error.c \
 				print_state.c \
 				prm_setup.c \
+				time_utils.c\
 				main.c
 BIN			=	./bin
 OBJ			=	$(addprefix $(BIN)/, $(SRC:c=o))
@@ -23,7 +23,6 @@ $(BIN)/%.o:./%.c $(INCLUDES) | $(BIN)
 	$(CC) $(FLAGS) -MMD -c $< -o $@
 
 $(NAME): $(OBJ)
-	#make -C ../libft/
 	$(CC) $(FLAGS) $(LIB) $^ -o $@
 
 $(BIN):
