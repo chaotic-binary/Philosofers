@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:02:27 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/01/27 20:02:27 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/01/27 22:03:10 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	free_data(t_ctrl *ctrl)
 	if (ctrl->frk)
 		free(ctrl->frk);
 	pthread_mutex_destroy(&ctrl->prm->lock_write);
-	pthread_mutex_destroy(&ctrl->prm->lock_die);
 	i = -1;
 	while (++i < ctrl->prm->num)
 		pthread_mutex_destroy(&ctrl->frk[i].lock);

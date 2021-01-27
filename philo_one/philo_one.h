@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:16:51 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/01/27 21:09:59 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/01/27 22:02:51 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ typedef	struct		s_prm
 	int				meals;
 	int				delay;
 	struct timeval	start;
-	pthread_mutex_t	lock_die;
 	pthread_mutex_t	lock_write;
 	int				fed;
 }					t_prm;

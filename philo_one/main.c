@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:35:43 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/01/27 21:18:31 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/01/27 22:03:34 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,7 @@ int			main(int ac, char **av)
 		free_data(&ctrl);
 		return (ret);
 	}
-	if (pthread_mutex_init(&ctrl.prm->lock_write, NULL) || \
-		pthread_mutex_init(&ctrl.prm->lock_die, NULL))
+	if (pthread_mutex_init(&ctrl.prm->lock_write, NULL))
 	{
 		free_data(&ctrl);
 		return (ERR_MUTEX);

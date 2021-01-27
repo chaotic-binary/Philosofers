@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:05:29 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/01/27 20:07:45 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/01/27 21:41:26 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void			print_state(t_ph *ph, int s)
 	long		time;
 	int			len;
 	char		buf[256];
-	const char	*state[] = {	"is eating\n", \
+	const char	*state[] = {"is eating\n", \
 							"is sleeping\n", \
 							"is thinking\n", \
 							"has taken a fork\n", \
