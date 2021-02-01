@@ -52,7 +52,6 @@ int			main(int ac, char **av)
 {
 	t_prm	prm;
 	t_ctrl	ctrl;
-	int		i;
 
 	if (!prm_setup(ac, av, &prm, &ctrl))
 		return (-1);

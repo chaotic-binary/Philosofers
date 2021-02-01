@@ -1,4 +1,4 @@
-NAME		=	test #philo_three
+NAME		=	philo_three
 
 SRC			=	act.c\
 				init.c \
@@ -13,7 +13,7 @@ DEP			=	$(OBJ:%.o=%.d)
 INCLUDE		=	philo_three.h
 LIB			=	-lpthread
 CC			=	gcc
-FLAGS		=	-Wall -Wextra -Werror -g
+FLAGS		=	-Wall -Wextra -Werror
 
 .PHONY: all clean fclean re
 
