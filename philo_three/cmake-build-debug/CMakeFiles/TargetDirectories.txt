@@ -1,0 +1,3 @@
+/Users/valeria/Projects/21/Philosofers/philo_three/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/valeria/Projects/21/Philosofers/philo_three/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/valeria/Projects/21/Philosofers/philo_three/cmake-build-debug/CMakeFiles/philosophers.dir

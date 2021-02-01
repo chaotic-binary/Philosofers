@@ -1,4 +1,4 @@
-NAME		=	philo_two
+NAME		=	test #philo_three
 
 SRC			=	act.c\
 				init.c \
@@ -10,10 +10,10 @@ SRC			=	act.c\
 BIN			=	./bin
 OBJ			=	$(addprefix $(BIN)/, $(SRC:c=o))
 DEP			=	$(OBJ:%.o=%.d)
-INCLUDE		=	philo_two.h
+INCLUDE		=	philo_three.h
 LIB			=	-lpthread
 CC			=	gcc
-FLAGS		=	-Wall -Wextra -Werror
+FLAGS		=	-Wall -Wextra -Werror -g
 
 .PHONY: all clean fclean re
 

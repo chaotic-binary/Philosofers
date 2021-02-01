@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/valeria/Projects/21/Philosofers/philo_three/main.c
+philo_three.h
+/Users/valeria/Projects/21/Philosofers/philo_three/philo_three.h
+
+/Users/valeria/Projects/21/Philosofers/philo_three/philo_three.h
+stdlib.h
+-
+unistd.h
+-
+limits.h
+-
+string.h
+-
+pthread.h
+-
+sys/time.h
+-
+signal.h
+-
+stdio.h
+-
+fcntl.h
+-
+semaphore.h
+-
+
