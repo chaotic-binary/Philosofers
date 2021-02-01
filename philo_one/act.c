@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:23:23 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/01/27 20:33:14 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/02/02 01:07:00 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,6 @@ void		*act(void *data)
 	while (42)
 	{
 		print_state(ph, THINK);
-		if (ph->meals == ph->prm->meals)
-			return (NULL);
 		eat(ph);
 	}
 	return (NULL);

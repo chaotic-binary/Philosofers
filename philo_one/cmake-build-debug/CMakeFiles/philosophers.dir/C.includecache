@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/valeria/Projects/21/Philosofers/philo_one/act.c
+philo_one.h
+/Users/valeria/Projects/21/Philosofers/philo_one/philo_one.h
+
 /Users/valeria/Projects/21/Philosofers/philo_one/philo_one.h
 stdlib.h
 -
@@ -21,8 +25,4 @@ sys/time.h
 -
 stdio.h
 -
-
-/Users/valeria/Projects/21/Philosofers/philo_one/prm_setup.c
-philo_one.h
-/Users/valeria/Projects/21/Philosofers/philo_one/philo_one.h
 
