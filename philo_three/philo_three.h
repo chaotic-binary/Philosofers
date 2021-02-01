@@ -79,7 +79,7 @@ typedef struct		s_ctrl
 int					prm_setup(int ac, char **av, t_prm *prm, t_ctrl *ctrl);
 void				ph_init(t_ctrl *ctrl);
 int					sems_init(t_ctrl *ctrl);
-void				*act(void *data);
+void				act(t_ph *ph);
 void				print_state(t_ph *ph, int status);
 long				get_time();
 long				get_interval(struct timeval t);

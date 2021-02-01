@@ -68,11 +68,8 @@ static void	eat(t_ph *ph)
 	ms_sleep(ph->prm->sleep);
 }
 
-void		*act(void *data)
+void		act(t_ph *ph)
 {
-	t_ph *ph;
-
-	ph = (t_ph *)data;
 	gettimeofday(&ph->last_meal, NULL);
 	if (init_thread(&monitor_death, ph, ph->prm->lock_write))
 		exit(ERR_THREAD);
@@ -81,5 +78,4 @@ void		*act(void *data)
 		print_state(ph, THINK);
 		eat(ph);
 	}
-	return (NULL);
 }
