@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ttamesha/Documents/Philosofers/philo_two
+CMAKE_SOURCE_DIR = /Users/valeria/Projects/21/Philosofers/philo_two
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ttamesha/Documents/Philosofers/philo_two/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/valeria/Projects/21/Philosofers/philo_two/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ttamesha/Documents/Philosofers/philo_two/cmake-build-debug/CMakeFiles /Users/ttamesha/Documents/Philosofers/philo_two/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/valeria/Projects/21/Philosofers/philo_two/cmake-build-debug/CMakeFiles /Users/valeria/Projects/21/Philosofers/philo_two/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ttamesha/Documents/Philosofers/philo_two/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/valeria/Projects/21/Philosofers/philo_two/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -170,59 +170,32 @@ act.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/act.c.s
 .PHONY : act.c.s
 
-free_data.o: free_data.c.o
+init.o: init.c.o
 
-.PHONY : free_data.o
-
-# target to build an object file
-free_data.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/free_data.c.o
-.PHONY : free_data.c.o
-
-free_data.i: free_data.c.i
-
-.PHONY : free_data.i
-
-# target to preprocess a source file
-free_data.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/free_data.c.i
-.PHONY : free_data.c.i
-
-free_data.s: free_data.c.s
-
-.PHONY : free_data.s
-
-# target to generate assembly for a file
-free_data.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/free_data.c.s
-.PHONY : free_data.c.s
-
-init_arrays.o: init_arrays.c.o
-
-.PHONY : init_arrays.o
+.PHONY : init.o
 
 # target to build an object file
-init_arrays.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/init_arrays.c.o
-.PHONY : init_arrays.c.o
+init.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/init.c.o
+.PHONY : init.c.o
 
-init_arrays.i: init_arrays.c.i
+init.i: init.c.i
 
-.PHONY : init_arrays.i
+.PHONY : init.i
 
 # target to preprocess a source file
-init_arrays.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/init_arrays.c.i
-.PHONY : init_arrays.c.i
+init.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/init.c.i
+.PHONY : init.c.i
 
-init_arrays.s: init_arrays.c.s
+init.s: init.c.s
 
-.PHONY : init_arrays.s
+.PHONY : init.s
 
 # target to generate assembly for a file
-init_arrays.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/init_arrays.c.s
-.PHONY : init_arrays.c.s
+init.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/init.c.s
+.PHONY : init.c.s
 
 main.o: main.c.o
 
@@ -250,6 +223,33 @@ main.s: main.c.s
 main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/main.c.s
 .PHONY : main.c.s
+
+num_to_buf.o: num_to_buf.c.o
+
+.PHONY : num_to_buf.o
+
+# target to build an object file
+num_to_buf.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/num_to_buf.c.o
+.PHONY : num_to_buf.c.o
+
+num_to_buf.i: num_to_buf.c.i
+
+.PHONY : num_to_buf.i
+
+# target to preprocess a source file
+num_to_buf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/num_to_buf.c.i
+.PHONY : num_to_buf.c.i
+
+num_to_buf.s: num_to_buf.c.s
+
+.PHONY : num_to_buf.s
+
+# target to generate assembly for a file
+num_to_buf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/num_to_buf.c.s
+.PHONY : num_to_buf.c.s
 
 print_state.o: print_state.c.o
 
@@ -344,15 +344,15 @@ help:
 	@echo "... act.o"
 	@echo "... act.i"
 	@echo "... act.s"
-	@echo "... free_data.o"
-	@echo "... free_data.i"
-	@echo "... free_data.s"
-	@echo "... init_arrays.o"
-	@echo "... init_arrays.i"
-	@echo "... init_arrays.s"
+	@echo "... init.o"
+	@echo "... init.i"
+	@echo "... init.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... num_to_buf.o"
+	@echo "... num_to_buf.i"
+	@echo "... num_to_buf.s"
 	@echo "... print_state.o"
 	@echo "... print_state.i"
 	@echo "... print_state.s"

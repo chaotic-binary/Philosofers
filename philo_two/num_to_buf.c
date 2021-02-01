@@ -1,24 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_data.c                                        :+:      :+:    :+:   */
+/*   num_to_buf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/27 20:02:27 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/01/27 20:02:27 by ttamesha         ###   ########.fr       */
+/*   Created: 2021/02/01 15:53:50 by ttamesha          #+#    #+#             */
+/*   Updated: 2021/02/01 22:18:04 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_two.h"
 
-void	free_data(t_ctrl *ctrl)
+static int		countdigits(long n)
 {
-	//int i;
+	int count;
 
-	if (ctrl->ph)
-		free(ctrl->ph);
-	if (ctrl->frk)
-		free(ctrl->frk);
+	count = 1;
+	while (n / 10 != 0)
+	{
+		count++;
+		n /= 10;
+	}
+	return (count);
+}
 
+int				num_to_buf(char *buf, long n)
+{
+	int len;
+	int i;
+
+	len = countdigits(n);
+	i = len;
+	while (i > 0)
+	{
+		buf[i - 1] = (n % 10) + '0';
+		i--;
+		n = n / 10;
+	}
+	buf[len++] = ' ';
+	return (len);
 }

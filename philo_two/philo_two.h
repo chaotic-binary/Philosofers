@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo_one.h                                        :+:      :+:    :+:   */
+/*   philo_two.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:16:51 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/01/27 21:44:18 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/02/01 22:18:55 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 # include <fcntl.h>
 # include <semaphore.h>
 
-# define FLAGS	O_CREAT | O_EXCL
-# define CHMOD 0644
+# define FLG	O_CREAT | O_EXCL
+# define CHMD	S_IRUSR | S_IWUSR
 
 enum	e_state
 {
@@ -51,12 +51,12 @@ typedef	struct		s_prm
 	int				meals;
 	int				delay;
 	struct timeval	start;
-	//int				fed;
+	int				fed;
 	sem_t			*frk;
 	sem_t			*book;
-	sem_t			*fed;
+	sem_t			*lock_fed;
 	sem_t			*lock_write;
-	sem_t			*lock_stop;
+	sem_t			*end;
 }					t_prm;
 
 typedef	struct		s_ph
@@ -65,6 +65,7 @@ typedef	struct		s_ph
 	struct timeval	last_meal;
 	int				meals;
 	struct s_prm	*prm;
+	sem_t			*lock_time;
 }					t_ph;
 
 typedef struct		s_ctrl
@@ -75,11 +76,11 @@ typedef struct		s_ctrl
 
 int					prm_setup(int ac, char **av, t_prm *prm, t_ctrl *ctrl);
 int					ph_init(t_ctrl *ctrl);
-int 				sems_init(t_ctrl *ctrl);
+int					sems_init(t_ctrl *ctrl);
 void				*act(void *data);
-void				free_data(t_ctrl *ctrl);
 void				print_state(t_ph *ph, int status);
 long				get_time();
 long				get_interval(struct timeval t);
-
+int					num_to_buf(char *buf, long n);
+int					init_thread(void *(*f)(void *), void *ph, sem_t *lock);
 #endif

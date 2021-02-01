@@ -17,9 +17,9 @@ static int	ft_isdigit(int c)
 	return (c >= 48 && c <= 57);
 }
 
-static int	ft_min(int x, int y)
+static int	ft_max(int x, int y)
 {
-	return ((x < y) ? x : y);
+	return ((x > y) ? x : y);
 }
 
 static int	ft_atoi(char *str)
@@ -79,7 +79,7 @@ int			prm_setup(int ac, char **av, t_prm *prm, t_ctrl *ctrl)
 	prm->die = ft_atoi(av[2]);
 	prm->eat = ft_atoi(av[3]);
 	prm->sleep = ft_atoi(av[4]);
-	prm->delay = ft_min(prm->eat, prm->sleep) * 1000;
+	prm->delay = (ft_max(prm->eat, prm->sleep) + 10) * 1000;
 	prm->meals = (ac == 6) ? ft_atoi(av[5]) : INT_MAX;
 	if (prm->num < 2 || prm->die < 0 || prm->eat < 0 \
 			|| prm->meals < 0 || prm->sleep < 0)

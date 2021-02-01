@@ -12,7 +12,7 @@
 
 #include "philo_one.h"
 
-int	frk_init(t_ctrl *ctrl)
+int			frk_init(t_ctrl *ctrl)
 {
 	int i;
 
@@ -23,19 +23,33 @@ int	frk_init(t_ctrl *ctrl)
 	{
 		ctrl->frk[i].last_user = -1;
 		if (pthread_mutex_init(&ctrl->frk[i].lock, NULL))
+		{
+			free(ctrl->frk);
 			return (ERR_MUTEX);
+		}
 		++i;
 	}
 	return (0);
 }
 
-int	ph_init(t_ctrl *ctrl)
+static int	err_exit(t_ctrl *ctrl)
+{
+	int i;
+
+	free(ctrl->frk);
+	i = -1;
+	while (++i < ctrl->prm->num)
+		pthread_mutex_destroy(&ctrl->frk[i].lock);
+	return (ERR_MALLOC);
+}
+
+int			ph_init(t_ctrl *ctrl)
 {
 	int i;
 
 	i = 0;
 	if (!(ctrl->ph = malloc(sizeof(t_ph) * ctrl->prm->num)))
-		return (ERR_MALLOC);
+		return (err_exit(ctrl));
 	while (i < ctrl->prm->num)
 	{
 		ctrl->ph[i].id = i + 1;

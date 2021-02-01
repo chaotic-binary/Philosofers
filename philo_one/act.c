@@ -14,7 +14,7 @@
 
 static void	ms_sleep(int ms)
 {
-	long			t;
+	long t;
 
 	t = get_time();
 	usleep(1000);

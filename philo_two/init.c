@@ -1,38 +1,72 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_arrays.c                                      :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:09:29 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/01/27 20:11:16 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/02/01 22:18:22 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_two.h"
 
-int sems_init(t_ctrl *ctrl)
+int			init_thread(void *(*f)(void *), void *ph, sem_t *lock)
 {
-	sem_unlink("book");
-	sem_unlink("frk");
-	sem_unlink("lock_write");
-	sem_unlink("fed");
-	sem_unlink("lock_stop");
-	if ((ctrl->prm->book = sem_open("book", FLAGS, CHMOD, 1)) == SEM_FAILED)
-		return (ERR_SEM);
-	if ((ctrl->prm->frk = sem_open("frk", FLAGS, CHMOD, ctrl->prm->num)) == SEM_FAILED)
-		return (ERR_SEM);
-	if ((ctrl->prm->lock_write = sem_open("lock_write", FLAGS, CHMOD, 1)) == SEM_FAILED)
-		return (ERR_SEM);
-	if ((ctrl->prm->fed = sem_open("fed", FLAGS, CHMOD, 0)) == SEM_FAILED)
-		return (ERR_SEM);
-	if ((ctrl->prm->lock_stop = sem_open("lock_stop", FLAGS, CHMOD, 0)) == SEM_FAILED)
+	pthread_t	t;
+
+	if (pthread_create(&t, NULL, f, ph))
+	{
+		sem_wait(lock);
+		return (ERR_THREAD);
+	}
+	pthread_detach(t);
+	return (0);
+}
+
+static int	sem_create(sem_t **sem, const char *name, int n)
+{
+	sem_unlink(name);
+	if ((*sem = sem_open(name, FLG, CHMD, n)) == SEM_FAILED)
 		return (ERR_SEM);
 	return (0);
 }
 
-int	ph_init(t_ctrl *ctrl)
+static void	generate_name(char *buf, int i)
+{
+	int len;
+
+	len = num_to_buf(buf, i);
+	buf[len - 1] = '\0';
+}
+
+int			sems_init(t_ctrl *ctrl)
+{
+	int		i;
+	char	buf[12];
+
+	if (sem_create(&ctrl->prm->book, "book", 1))
+		return (ERR_SEM);
+	if (sem_create(&ctrl->prm->frk, "frk", ctrl->prm->num))
+		return (ERR_SEM);
+	if (sem_create(&ctrl->prm->lock_write, "lock_write", 1))
+		return (ERR_SEM);
+	if (sem_create(&ctrl->prm->lock_fed, "fed", 1))
+		return (ERR_SEM);
+	if (sem_create(&ctrl->prm->end, "end", 0))
+		return (ERR_SEM);
+	i = -1;
+	while (++i < ctrl->prm->num)
+	{
+		generate_name(buf, ctrl->ph[i].id);
+		if (sem_create(&ctrl->ph[i].lock_time, buf, 1))
+			return (ERR_SEM);
+	}
+	return (0);
+}
+
+int			ph_init(t_ctrl *ctrl)
 {
 	int i;
 

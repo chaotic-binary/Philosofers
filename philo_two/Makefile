@@ -1,16 +1,16 @@
-NAME		=	philo_one
+NAME		=	test #philo_two
 
 SRC			=	act.c\
-				free_data.c \
-				init_arrays.c \
+				init.c \
 				print_state.c \
 				prm_setup.c \
 				time_utils.c\
+				num_to_buf.c \
 				main.c
 BIN			=	./bin
 OBJ			=	$(addprefix $(BIN)/, $(SRC:c=o))
 DEP			=	$(OBJ:%.o=%.d)
-INCLUDE		=	philo_one.h
+INCLUDE		=	philo_two.h
 LIB			=	-lpthread
 CC			=	gcc
 FLAGS		=	-Wall -Wextra -Werror -g

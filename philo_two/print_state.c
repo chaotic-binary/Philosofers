@@ -12,19 +12,6 @@
 
 #include "philo_two.h"
 
-static int		countdigits(long n)
-{
-	int count;
-
-	count = 1;
-	while (n / 10 != 0)
-	{
-		count++;
-		n /= 10;
-	}
-	return (count);
-}
-
 static size_t	ft_strcpy(char *dest, const char *src)
 {
 	const char *s;
@@ -38,37 +25,23 @@ static size_t	ft_strcpy(char *dest, const char *src)
 	return (src - s);
 }
 
-static int		itoa_buf(char *buf, long n)
-{
-	int len;
-	int i;
-
-	len = countdigits(n);
-	i = len;
-	while (i > 0)
-	{
-		buf[i - 1] = (n % 10) + '0';
-		i--;
-		n = n / 10;
-	}
-	buf[len++] = ' ';
-	return (len);
-}
-
 void			print_state(t_ph *ph, int s)
 {
 	long		time;
 	int			len;
-	char		buf[256];
+	char		buf[100];
 	const char	*state[] = {"is eating\n", \
 							"is sleeping\n", \
 							"is thinking\n", \
 							"has taken a fork\n", \
 							"died\n"};
 
+	sem_wait(ph->prm->lock_write);
 	time = get_interval(ph->prm->start);
-	len = itoa_buf(buf, time);
-	len = len + itoa_buf(&buf[len], ph->id);
+	len = num_to_buf(buf, time);
+	len = len + num_to_buf(&buf[len], ph->id);
 	len = len + ft_strcpy(&buf[len], state[s]);
 	write(1, buf, len);
+	if (s != DIED)
+		sem_post(ph->prm->lock_write);
 }

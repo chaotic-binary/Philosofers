@@ -13,7 +13,7 @@ DEP			=	$(OBJ:%.o=%.d)
 INCLUDE		=	philo_one.h
 LIB			=	-lpthread
 CC			=	gcc
-FLAGS		=	-Wall -Wextra -Werror -g
+FLAGS		=	-Wall -Wextra -Werror
 
 .PHONY: all clean fclean re
 

@@ -16,12 +16,10 @@ void	free_data(t_ctrl *ctrl)
 {
 	int i;
 
-	if (ctrl->ph)
-		free(ctrl->ph);
-	if (ctrl->frk)
-		free(ctrl->frk);
-	pthread_mutex_destroy(&ctrl->prm->lock_write);
+	free(ctrl->ph);
+	free(ctrl->frk);
 	i = -1;
 	while (++i < ctrl->prm->num)
 		pthread_mutex_destroy(&ctrl->frk[i].lock);
+	pthread_mutex_destroy(&ctrl->prm->lock_write);
 }

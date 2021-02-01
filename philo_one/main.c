@@ -19,7 +19,7 @@ static int	monitor(t_ctrl *ctrl)
 	if (ctrl->prm->fed == ctrl->prm->num)
 	{
 		pthread_mutex_lock(&ctrl->prm->lock_write);
-		write(1, "FED\n", 4);
+		write(1, "ALL FED\n", 8);
 		return (1);
 	}
 	i = -1;
@@ -81,10 +81,7 @@ int			main(int ac, char **av)
 	if (!(ret = frk_init(&ctrl)))
 		ret = ph_init(&ctrl);
 	if (ret)
-	{
-		free_data(&ctrl);
 		return (ret);
-	}
 	if (pthread_mutex_init(&ctrl.prm->lock_write, NULL))
 	{
 		free_data(&ctrl);

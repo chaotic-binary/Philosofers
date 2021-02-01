@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:05:29 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/01/27 21:41:26 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/01/28 01:49:05 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static size_t	ft_strcpy(char *dest, const char *src)
 	return (src - s);
 }
 
-static int		itoa_buf(char *buf, long n)
+static int		num_to_buf(char *buf, long n)
 {
 	int len;
 	int i;
@@ -59,7 +59,7 @@ void			print_state(t_ph *ph, int s)
 {
 	long		time;
 	int			len;
-	char		buf[256];
+	char		buf[100];
 	const char	*state[] = {"is eating\n", \
 							"is sleeping\n", \
 							"is thinking\n", \
@@ -68,8 +68,8 @@ void			print_state(t_ph *ph, int s)
 
 	pthread_mutex_lock(&ph->prm->lock_write);
 	time = get_interval(ph->prm->start);
-	len = itoa_buf(buf, time);
-	len = len + itoa_buf(&buf[len], ph->id);
+	len = num_to_buf(buf, time);
+	len = len + num_to_buf(&buf[len], ph->id);
 	len = len + ft_strcpy(&buf[len], state[s]);
 	write(1, buf, len);
 	if (s != DIED)
