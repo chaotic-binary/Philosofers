@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:35:43 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/01/27 22:03:34 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/02/02 02:44:44 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	monitor(t_ctrl *ctrl)
 {
 	int		i;
 
-	if (ctrl->prm->fed == ctrl->prm->num)
+	if (ctrl->prm->fed >= ctrl->prm->num)
 	{
 		pthread_mutex_lock(&ctrl->prm->lock_write);
 		write(1, "ALL FED\n", 8);
