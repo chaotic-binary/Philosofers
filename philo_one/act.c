@@ -12,7 +12,7 @@
 
 #include "philo_one.h"
 
-static void	ms_sleep(int ms)
+static void	usleep_ms(int ms)
 {
 	long t;
 
@@ -48,11 +48,11 @@ static void	eat(t_ph *ph)
 	if (++ph->meals == ph->prm->meals)
 		++ph->prm->fed;
 	gettimeofday(&ph->last_meal, NULL);
-	ms_sleep(ph->prm->eat);
+	usleep_ms(ph->prm->eat);
 	pthread_mutex_unlock(&ph->f1->lock);
 	pthread_mutex_unlock(&ph->f2->lock);
 	print_state(ph, SLEEP);
-	ms_sleep(ph->prm->sleep);
+	usleep_ms(ph->prm->sleep);
 }
 
 void		*act(void *data)

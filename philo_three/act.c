@@ -12,7 +12,7 @@
 
 #include "philo_three.h"
 
-static void	ms_sleep(int ms)
+static void	usleep_ms(int ms)
 {
 	long t;
 
@@ -59,13 +59,13 @@ static void	eat(t_ph *ph)
 	sem_wait(ph->lock_time);
 	gettimeofday(&ph->last_meal, NULL);
 	sem_post(ph->lock_time);
-	ms_sleep(ph->prm->eat);
+	usleep_ms(ph->prm->eat);
 	if (++ph->meals == ph->prm->meals)
 		sem_post(ph->prm->fed);
 	sem_post(ph->prm->frk);
 	sem_post(ph->prm->frk);
 	print_state(ph, SLEEP);
-	ms_sleep(ph->prm->sleep);
+	usleep_ms(ph->prm->sleep);
 }
 
 void		act(t_ph *ph)
