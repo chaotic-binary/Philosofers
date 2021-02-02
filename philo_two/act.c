@@ -44,7 +44,7 @@ static void	*monitor(void *data)
 			return (NULL);
 		}
 		sem_post(ph->lock_time);
-		usleep(1100);
+		usleep(1200);
 	}
 	return (NULL);
 }

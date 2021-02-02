@@ -10,15 +10,7 @@
 philo_two.h
 /Users/valeria/Projects/21/Philosofers/philo_two/philo_two.h
 
-/Users/valeria/Projects/21/Philosofers/philo_two/init.c
-philo_two.h
-/Users/valeria/Projects/21/Philosofers/philo_two/philo_two.h
-
 /Users/valeria/Projects/21/Philosofers/philo_two/main.c
-philo_two.h
-/Users/valeria/Projects/21/Philosofers/philo_two/philo_two.h
-
-/Users/valeria/Projects/21/Philosofers/philo_two/num_to_buf.c
 philo_two.h
 /Users/valeria/Projects/21/Philosofers/philo_two/philo_two.h
 
@@ -41,16 +33,4 @@ fcntl.h
 -
 semaphore.h
 -
-
-/Users/valeria/Projects/21/Philosofers/philo_two/print_state.c
-philo_two.h
-/Users/valeria/Projects/21/Philosofers/philo_two/philo_two.h
-
-/Users/valeria/Projects/21/Philosofers/philo_two/prm_setup.c
-philo_two.h
-/Users/valeria/Projects/21/Philosofers/philo_two/philo_two.h
-
-/Users/valeria/Projects/21/Philosofers/philo_two/time_utils.c
-philo_two.h
-/Users/valeria/Projects/21/Philosofers/philo_two/philo_two.h
 
