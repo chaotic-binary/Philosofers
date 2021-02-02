@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:35:43 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/02/01 23:42:53 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/02/02 12:25:52 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,25 @@ static void	*monitor_fed(void *data)
 
 static int	run_threads(t_ctrl *ctrl)
 {
-	int		i;
+	int i;
 
-	i = 0;
+	i = -1;
 	gettimeofday(&ctrl->prm->start, NULL);
-	while (i < ctrl->prm->num)
+	while (++i < ctrl->prm->num)
 	{
 		if ((ctrl->ph[i].pid = fork()) == -1)
 			exit(ERR_PROCESS);
 		else if (ctrl->ph[i].pid == 0)
 			act(&ctrl->ph[i]);
 		usleep(10);
-		i++;
 	}
 	if (init_thread(&monitor_fed, ctrl, ctrl->prm->lock_write))
 		exit(ERR_THREAD);
 	sem_wait(ctrl->prm->end);
+	usleep(ctrl->prm->delay);
+	i = -1;
+	while (++i < ctrl->prm->num)
+		kill(ctrl->ph[i].pid, SIGTERM);
 	return (0);
 }
 
@@ -62,7 +65,6 @@ int			main(int ac, char **av)
 		exit(ERR_SEM);
 	}
 	run_threads(&ctrl);
-	usleep(prm.delay);
 	free(ctrl.ph);
 	return (0);
 }

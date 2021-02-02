@@ -6,19 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/valeria/Projects/21/Philosofers/philo_three/act.c
-philo_three.h
-/Users/valeria/Projects/21/Philosofers/philo_three/philo_three.h
-
-/Users/valeria/Projects/21/Philosofers/philo_three/init.c
-philo_three.h
-/Users/valeria/Projects/21/Philosofers/philo_three/philo_three.h
-
 /Users/valeria/Projects/21/Philosofers/philo_three/main.c
-philo_three.h
-/Users/valeria/Projects/21/Philosofers/philo_three/philo_three.h
-
-/Users/valeria/Projects/21/Philosofers/philo_three/num_to_buf.c
 philo_three.h
 /Users/valeria/Projects/21/Philosofers/philo_three/philo_three.h
 
@@ -43,16 +31,4 @@ fcntl.h
 -
 semaphore.h
 -
-
-/Users/valeria/Projects/21/Philosofers/philo_three/print_state.c
-philo_three.h
-/Users/valeria/Projects/21/Philosofers/philo_three/philo_three.h
-
-/Users/valeria/Projects/21/Philosofers/philo_three/prm_setup.c
-philo_three.h
-/Users/valeria/Projects/21/Philosofers/philo_three/philo_three.h
-
-/Users/valeria/Projects/21/Philosofers/philo_three/time_utils.c
-philo_three.h
-/Users/valeria/Projects/21/Philosofers/philo_three/philo_three.h
 

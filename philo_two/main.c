@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:35:43 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/02/01 21:56:54 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/02/02 12:25:03 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,13 @@ static int	run_threads(t_ctrl *ctrl)
 {
 	int i;
 
-	i = 0;
+	i = -1;
 	gettimeofday(&ctrl->prm->start, NULL);
-	while (i < ctrl->prm->num)
+	while (++i < ctrl->prm->num)
 	{
 		if (init_thread(&act, &ctrl->ph[i], ctrl->prm->lock_write))
 			return (ERR_THREAD);
 		usleep(10);
-		i++;
 	}
 	sem_wait(ctrl->prm->end);
 	return (0);
