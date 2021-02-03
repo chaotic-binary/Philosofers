@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/valeria/Projects/21/Philosofers/philo_three/act.c
+/Users/ttamesha/Documents/Philosofers/philo_three/free_data.c
 philo_three.h
-/Users/valeria/Projects/21/Philosofers/philo_three/philo_three.h
+/Users/ttamesha/Documents/Philosofers/philo_three/philo_three.h
 
-/Users/valeria/Projects/21/Philosofers/philo_three/philo_three.h
+/Users/ttamesha/Documents/Philosofers/philo_three/philo_three.h
 stdlib.h
 -
 unistd.h

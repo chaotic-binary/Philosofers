@@ -6,6 +6,7 @@ SRC			=	act.c\
 				prm_setup.c \
 				time_utils.c\
 				num_to_buf.c \
+				free_data.c\
 				main.c
 BIN			=	./bin
 OBJ			=	$(addprefix $(BIN)/, $(SRC:c=o))

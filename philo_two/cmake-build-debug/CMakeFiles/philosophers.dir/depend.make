@@ -4,6 +4,9 @@
 CMakeFiles/philosophers.dir/act.c.o: ../act.c
 CMakeFiles/philosophers.dir/act.c.o: ../philo_two.h
 
+CMakeFiles/philosophers.dir/free_data.c.o: ../free_data.c
+CMakeFiles/philosophers.dir/free_data.c.o: ../philo_two.h
+
 CMakeFiles/philosophers.dir/init.c.o: ../init.c
 CMakeFiles/philosophers.dir/init.c.o: ../philo_two.h
 

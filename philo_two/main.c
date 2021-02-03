@@ -40,12 +40,11 @@ int			main(int ac, char **av)
 		ret = sems_init(&ctrl);
 	if (ret)
 	{
-		if (ctrl.ph)
-			free(ctrl.ph);
+		free_data(&ctrl);
 		return (ret);
 	}
 	ret = run_threads(&ctrl);
 	usleep(prm.delay);
-	free(ctrl.ph);
+	free_data(&ctrl);
 	return (ret);
 }

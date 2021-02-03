@@ -82,5 +82,7 @@ void				print_state(t_ph *ph, int status);
 long				get_time();
 long				get_interval(struct timeval t);
 int					num_to_buf(char *buf, long n);
+void				generate_name(char *buf, int i);
 int					init_thread(void *(*f)(void *), void *ph, sem_t *lock);
+void 				free_data(t_ctrl *ctrl);
 #endif

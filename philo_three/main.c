@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:35:43 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/02/02 12:25:52 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/02/03 16:53:42 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,10 @@ int			main(int ac, char **av)
 	ph_init(&ctrl);
 	if (sems_init(&ctrl))
 	{
-		free(ctrl.ph);
+		free_data(&ctrl);
 		exit(ERR_SEM);
 	}
 	run_threads(&ctrl);
-	free(ctrl.ph);
+	free_data(&ctrl);
 	return (0);
 }

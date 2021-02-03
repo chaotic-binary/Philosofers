@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/valeria/Projects/21/Philosofers/philo_one/act.c" "/Users/valeria/Projects/21/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/act.c.o"
-  "/Users/valeria/Projects/21/Philosofers/philo_one/free_data.c" "/Users/valeria/Projects/21/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/free_data.c.o"
-  "/Users/valeria/Projects/21/Philosofers/philo_one/init_arrays.c" "/Users/valeria/Projects/21/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/init_arrays.c.o"
-  "/Users/valeria/Projects/21/Philosofers/philo_one/main.c" "/Users/valeria/Projects/21/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/main.c.o"
-  "/Users/valeria/Projects/21/Philosofers/philo_one/print_state.c" "/Users/valeria/Projects/21/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/print_state.c.o"
-  "/Users/valeria/Projects/21/Philosofers/philo_one/prm_setup.c" "/Users/valeria/Projects/21/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/prm_setup.c.o"
-  "/Users/valeria/Projects/21/Philosofers/philo_one/time_utils.c" "/Users/valeria/Projects/21/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/time_utils.c.o"
+  "/Users/ttamesha/Documents/Philosofers/philo_one/act.c" "/Users/ttamesha/Documents/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/act.c.o"
+  "/Users/ttamesha/Documents/Philosofers/philo_one/free_data.c" "/Users/ttamesha/Documents/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/free_data.c.o"
+  "/Users/ttamesha/Documents/Philosofers/philo_one/init_arrays.c" "/Users/ttamesha/Documents/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/init_arrays.c.o"
+  "/Users/ttamesha/Documents/Philosofers/philo_one/main.c" "/Users/ttamesha/Documents/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/main.c.o"
+  "/Users/ttamesha/Documents/Philosofers/philo_one/print_state.c" "/Users/ttamesha/Documents/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/print_state.c.o"
+  "/Users/ttamesha/Documents/Philosofers/philo_one/prm_setup.c" "/Users/ttamesha/Documents/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/prm_setup.c.o"
+  "/Users/ttamesha/Documents/Philosofers/philo_one/time_utils.c" "/Users/ttamesha/Documents/Philosofers/philo_one/cmake-build-debug/CMakeFiles/philosophers.dir/time_utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

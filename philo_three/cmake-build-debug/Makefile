@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/valeria/Projects/21/Philosofers/philo_three
+CMAKE_SOURCE_DIR = /Users/ttamesha/Documents/Philosofers/philo_three
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/valeria/Projects/21/Philosofers/philo_three/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ttamesha/Documents/Philosofers/philo_three/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/valeria/Projects/21/Philosofers/philo_three/cmake-build-debug/CMakeFiles /Users/valeria/Projects/21/Philosofers/philo_three/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ttamesha/Documents/Philosofers/philo_three/cmake-build-debug/CMakeFiles /Users/ttamesha/Documents/Philosofers/philo_three/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/valeria/Projects/21/Philosofers/philo_three/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ttamesha/Documents/Philosofers/philo_three/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -169,6 +169,33 @@ act.s: act.c.s
 act.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/act.c.s
 .PHONY : act.c.s
+
+free_data.o: free_data.c.o
+
+.PHONY : free_data.o
+
+# target to build an object file
+free_data.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/free_data.c.o
+.PHONY : free_data.c.o
+
+free_data.i: free_data.c.i
+
+.PHONY : free_data.i
+
+# target to preprocess a source file
+free_data.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/free_data.c.i
+.PHONY : free_data.c.i
+
+free_data.s: free_data.c.s
+
+.PHONY : free_data.s
+
+# target to generate assembly for a file
+free_data.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/free_data.c.s
+.PHONY : free_data.c.s
 
 init.o: init.c.o
 
@@ -344,6 +371,9 @@ help:
 	@echo "... act.o"
 	@echo "... act.i"
 	@echo "... act.s"
+	@echo "... free_data.o"
+	@echo "... free_data.i"
+	@echo "... free_data.s"
 	@echo "... init.o"
 	@echo "... init.i"
 	@echo "... init.s"

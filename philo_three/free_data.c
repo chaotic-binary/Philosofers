@@ -1,51 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   num_to_buf.c                                       :+:      :+:    :+:   */
+/*   free_data.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 15:53:50 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/02/03 16:54:30 by ttamesha         ###   ########.fr       */
+/*   Created: 2021/02/03 16:52:12 by ttamesha          #+#    #+#             */
+/*   Updated: 2021/02/03 16:52:20 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_three.h"
 
-static int		countdigits(long n)
+void	free_data(t_ctrl *ctrl)
 {
-	int count;
+	int		i;
+	char	buf[12];
 
-	count = 1;
-	while (n / 10 != 0)
+	if (ctrl->ph)
+		free(ctrl->ph);
+	sem_unlink("book");
+	sem_unlink("frk");
+	sem_unlink("fed");
+	sem_unlink("lock_write");
+	sem_unlink("end");
+	i = -1;
+	while (++i < ctrl->prm->num)
 	{
-		count++;
-		n /= 10;
+		generate_name(buf, ctrl->ph[i].id);
+		sem_unlink(buf);
 	}
-	return (count);
-}
-
-int				num_to_buf(char *buf, long n)
-{
-	int len;
-	int i;
-
-	len = countdigits(n);
-	i = len;
-	while (i > 0)
-	{
-		buf[i - 1] = (n % 10) + '0';
-		i--;
-		n = n / 10;
-	}
-	buf[len++] = ' ';
-	return (len);
-}
-
-void			generate_name(char *buf, int i)
-{
-	int len;
-
-	len = num_to_buf(buf, i);
-	buf[len - 1] = '\0';
 }

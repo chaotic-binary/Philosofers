@@ -29,6 +29,7 @@ static void	*monitor(void *data)
 	ph = (t_ph *)data;
 	while (42)
 	{
+		sem_wait(ph->prm->lock_fed);
 		if (ph->prm->fed >= ph->prm->num)
 		{
 			sem_wait(ph->prm->lock_write);
@@ -36,6 +37,7 @@ static void	*monitor(void *data)
 			sem_post(ph->prm->end);
 			return (NULL);
 		}
+		sem_post(ph->prm->lock_fed);
 		sem_wait(ph->lock_time);
 		if (get_interval(ph->last_meal) > ph->prm->die)
 		{

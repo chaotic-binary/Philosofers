@@ -33,14 +33,6 @@ static int	sem_create(sem_t **sem, const char *name, int n)
 	return (0);
 }
 
-static void	generate_name(char *buf, int i)
-{
-	int len;
-
-	len = num_to_buf(buf, i);
-	buf[len - 1] = '\0';
-}
-
 int			sems_init(t_ctrl *ctrl)
 {
 	int		i;

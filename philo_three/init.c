@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:09:29 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/02/01 23:42:28 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/02/03 16:54:16 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,6 @@ static int	sem_create(sem_t **sem, const char *name, int n)
 	if ((*sem = sem_open(name, FLG, CHMD, n)) == SEM_FAILED)
 		return (ERR_SEM);
 	return (0);
-}
-
-static void	generate_name(char *buf, int i)
-{
-	int len;
-
-	len = num_to_buf(buf, i);
-	buf[len - 1] = '\0';
 }
 
 int			sems_init(t_ctrl *ctrl)
