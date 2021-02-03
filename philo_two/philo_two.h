@@ -6,7 +6,7 @@
 /*   By: ttamesha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 20:16:51 by ttamesha          #+#    #+#             */
-/*   Updated: 2021/02/01 22:18:55 by ttamesha         ###   ########.fr       */
+/*   Updated: 2021/02/03 17:09:54 by ttamesha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,5 @@ long				get_interval(struct timeval t);
 int					num_to_buf(char *buf, long n);
 void				generate_name(char *buf, int i);
 int					init_thread(void *(*f)(void *), void *ph, sem_t *lock);
-void 				free_data(t_ctrl *ctrl);
+void				free_data(t_ctrl *ctrl);
 #endif
